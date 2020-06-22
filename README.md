@@ -21,17 +21,6 @@ Now that you already have the template cloned, and ready to continue, you must o
 
 - **`POST /repositories/:id/like`**: The route must increase the number of likes from the specific repository chosen through the `id` param present in the route parameters, at each call of this route, the number of likes must be increased by 1;
 
-**Tip**: In the code above, we used `POST` in a route, even though it changes the number of likes in the repository without creating anything directly.
-
-If we semantically divide the responsibilities of our application into entities, the like would be an entity, and the repository would be another entity.
-
-With that been said, we have different business rules for each entity, so, by calling the 'like' route and adding just one like, we can interpret that we are creating a new like, and not updating the likes.
-
-So why not use `PUT` instead of `POST`? Precisely because we are "creating" A new like, and not updating the number of likes to any other value.
-
-It may be difficult to see because it is just a number, but think that each like is saved in a table in the database with the user who added this like. Now it’s clearer that you’re creating a new like, right?
-
-Good studies <3
 
 ### Tests Specification
 
